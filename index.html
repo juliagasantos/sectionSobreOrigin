@@ -68,41 +68,47 @@
 
                 <!-- valores -->
                 <div class="valores">
-                    <div class="open">
-                        <a class="btnOpen"  class="colorOpen" onclick="openCity('inovacao')">INOVAÇÃO</a>
-                        <a class="btnOpen"  class="colorOpen" onclick="openCity('qualidade')">QUALIDADE</a>
-                        <a class="btnOpen"  class="colorOpen" onclick="openCity('colaboracao')">COLABORAÇÃO</a>
-                        <a class="btnOpen"  class="colorOpen" onclick="openCity('etica')">ÉTICA</a>
-                        <a class="btnOpen"  class="colorOpen" onclick="openCity('satisfacao')">SATISFAÇÃO DO CLIENTE</a>
+                    <ul class="openValores">
+                        <li class="tab active" onclick="showTab('inovacao')">INOVAÇÃO</li>
+                        <li class="tab" onclick="showTab('qualidade')">QUALIDADE</li>
+                        <li class="tab" onclick="showTab('colaboracao')">COLABORAÇÃO</li>
+                        <li class="tab" onclick="showTab('etica')">ÉTICA</li>
+                        <li class="tab" onclick="showTab('satisfacao')">SATISFAÇÃO DO CLIENTE
+                        </li>
+
+                    </ul>
+
+                    <div id="inovacao" class="tab-content active">
+                        <p>Estamos sempre em busca de novas soluções e tecnologias para criar sites modernos e
+                            personalizados, que atendam às necessidades únicas de cada cliente. Nossa busca pela
+                            inovação nos permite entregar resultados criativos e de alto impacto.</p>
                     </div>
-                    <div class="textOpen">
-
-                        <div id="inovacao" class="topic" class="colorOpen" >
-                            <p>A inovação é o motor do nosso progresso. Estamos sempre em busca de novas soluções e tecnologias para oferecer aos nossos clientes o que há de mais moderno, garantindo melhorias contínuas em nossos processos e resultados.</p>
-                        </div>
-
-                        <div id="qualidade" class="topic" style="display:none" class="colorOpen" >
-                            <p>A qualidade é nossa prioridade. Buscamos sempre entregar produtos e serviços que atendam aos mais altos padrões, garantindo excelência e a confiança de nossos clientes em cada detalhe do nosso trabalho.</p>
-                        </div>
-
-                        <div id="colaboracao" class="topic" style="display:none" class="colorOpen" >
-                            <p>Acreditamos no poder da colaboração. Trabalhamos juntos, compartilhando conhecimentos e respeitando diferentes perspectivas, para alcançar melhores resultados e fortalecer nossas parcerias.</p>
-                        </div>
-
-                        <div id="etica" class="topic" style="display:none" class="colorOpen" >
-                            <p>A ética orienta todas as nossas ações. Atuamos com transparência, honestidade e responsabilidade, garantindo a confiança de nossos clientes, colaboradores e parceiros em tudo o que fazemos.</p>
-                        </div>
-
-                        <div id="satisfacao" class="topic" style="display:none" class="colorOpen" >
-                            <p>A satisfação do cliente é nossa principal missão. Nos dedicamos a oferecer soluções que superem expectativas e proporcionem uma experiência positiva, criando relações de confiança e fidelidade.</p>
-                        </div>
+                    <div id="qualidade" class="tab-content">
+                        <p>Nosso compromisso com a qualidade garante que entregamos sites bem desenvolvidos, rápidos e
+                            funcionais. Cada projeto é realizado com cuidado e atenção aos detalhes, sempre superando as
+                            expectativas dos nossos clientes.</p>
                     </div>
-
+                    <div id="colaboracao" class="tab-content">
+                        <p>Acreditamos na força da colaboração, trabalhando de perto com nossos clientes para entender
+                            suas necessidades e oferecer soluções que atendam aos seus objetivos. A parceria constante é
+                            essencial para alcançar os melhores resultados.</p>
+                    </div>
+                    <div id="etica" class="tab-content">
+                        <p>Priorizamos a transparência, honestidade e respeito em todos os nossos processos, garantindo
+                            que nossos clientes possam confiar em nossa integridade. Atuamos de forma ética em todas as
+                            fases do projeto.</p>
+                    </div>
+                    <div id="satisfacao" class="tab-content">
+                        <p>Nosso maior objetivo é garantir a satisfação total dos nossos clientes. Estamos comprometidos
+                            em oferecer soluções que não apenas atendam, mas superem suas expectativas, criando relações
+                            duradouras e de confiança.</p>
+                    </div>
                 </div>
 
-
             </div>
-
+            
+            <!-- <div class="line">
+            </div> -->
 
 
 

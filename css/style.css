@@ -62,15 +62,15 @@ body {
 
         .missao-visao {
             display: flex;
-            gap: 2rem;
-            width: 720px;
+            gap: 8em;
+            width: 774.98px;
 
             & .missao,
             & .visao {
                 border: 1px solid var(--clr-rosa);
-                border-radius: 1rem;
+                border-radius: 0.3rem;
                 cursor: pointer;
-                height: 4rem;
+                height: 3.5rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -97,7 +97,7 @@ body {
                 }
 
                 &:hover {
-                    height: 300px;
+                    height: 250px;
                 }
 
                 &:hover .textMissao,
@@ -109,62 +109,170 @@ body {
 
         .valores {
             border: 1px solid var(--clr-rosa);
-            border-radius: 1em;
-            padding: 1em;
-            width: 720px;
+            border-radius: 5px;
+            background: var(--clr-transparente);
+            padding: 0.8em;
+            width: 747.5px;
 
-
-            & .open {
+            & .openValores {
                 display: flex;
-                justify-content: center;
+                list-style: none;
+                justify-content: space-between;
                 align-items: center;
 
-                & .btnOpen {
-                    border-radius: 1rem;
-                    transition: all 0.2s ease;
-                    margin: 0 0.3em;
-                    padding: 0.8em 1.2em;
-                    cursor: pointer;
+                & .tab.active {
                     color: var(--clr-branco);
+                    background: #CF2DF440;
+                    border: 1px solid var(--clr-rosa);
+                    border-bottom: none;
+                    /* Remove a borda inferior da aba ativa */
+                }
+
+                & .tab {
+                    padding: 0.8em 1em;
+                    cursor: pointer;
+                    background: none;
+                    color: #bbb;
+                    transition: 0.3s;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border-bottom: 1px solid var(--clr-rosa);
+
+                    &:hover {
+                        color: white;
+                    }
                 }
             }
 
-            & .textOpen {
-                display: flex;
-                align-items: flex-start;
+            & .tab-content.active {
+                display: block;
+                margin: auto;
+                border-bottom: 1px solid var(--clr-rosa);
+                border-right: 1px solid var(--clr-rosa);
+                border-left: 1px solid var(--clr-rosa);
 
-                & .topic {
-                    padding: 1.5em;
+            }
 
-                    & h2 {
-                        font-size: 1.2em;
-                        color: var(--clr-rosa);
-                    }
-
-                    & p {
-                        padding: 1em 0 0;
-                        color: var(--clr-branco);
-                    }
-                }
+            & .tab-content {
+                padding: 2em 1em 1em;
+                display: none;
+                background: #CF2DF440;
+                border-radius: 0 0 0.2em 0.2em;
+                color: var(--clr-branco);
             }
         }
-
-        /* &:hover {
-            & .open {
-                & .btnOpen {
-                    border: 1px solid var(--clr-rosa);
-                }
-            }
-
-            & .textOpen {
-                & .topic {
-                    & p {
-                        border: 1px solid var(--clr-rosa);
-                    }
-                }
-            }
-        } */
     }
-}
 
-/* #endregion */
+    @media (max-width: 1024px) {
+        .missao-visao {
+            gap: 4em; // Menos espaço entre os itens
+            width: 90%; // Ajuste no tamanho das caixas
+        }
+
+        .missao,
+        .visao {
+            width: 100%;
+            height: auto;
+        }
+
+        .quality {
+            padding: 2rem;
+            gap: 2rem;
+        }
+    }
+
+    /* Para telas de 768px ou menos */
+    @media (max-width: 768px) {
+        .missao-visao {
+            gap: 2em;
+            width: 100%;
+        }
+
+        .missao,
+        .visao {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .quality {
+            padding: 1.5rem;
+            gap: 1.5rem;
+        }
+
+        .tab {
+            padding: 0.6em 1em;
+        }
+
+        .tab-content {
+            padding: 1.5em 0.5em;
+        }
+    }
+
+    /* Para telas de 480px ou menos */
+    @media (max-width: 480px) {
+        .titulo {
+            font-size: 1.5rem;
+        }
+
+        .texto {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .quality {
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        .missao-visao {
+            gap: 1em;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .missao,
+        .visao {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+
+        }
+
+        .textMissao,
+        .textVisao {
+            display: block;
+            color: var(--clr-branco);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .openValores {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .tab {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .tab-content {
+            padding: 1.5em 0.5em;
+        }
+    }
+
+
+
+    /* .line {
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--clr-rosa);
+    width: 400px; 
+} */
+
+    /* #endregion */
